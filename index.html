@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book</title>
+  <img align="h2" alt="coding" width="1600" height="250" src="https://media.newyorker.com/photos/5fbc0fe0fce8b48408ab10a7/master/w_1920,c_limit/2020-YearinReview-BestCookbooks.gif">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Recipe Book</h1>
+  </header>
+
+  <div id="recipe-form">
+    <h2>Add/Edit Recipe</h2>
+    <label for="recipeName">Recipe Name:</label>
+    <input type="text" id="recipeName">
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients"></textarea>
+    <label for="methods">Methods:</label>
+    <textarea id="methods"></textarea>
+    <div class="recipe-actions">
+      <button onclick="addOrUpdateRecipe()">Add/Edit Recipe</button>
+      <button onclick="clearForm()">Clear Form</button>
+    </div>
+  </div>
+
+  <div id="recipe-list">
+    <h2>Recipe List</h2>
+    <div class="search-bar">
+      <label for="search">Search:</label>
+      <input type="text" id="search" oninput="searchRecipe()">
+    </div>
+    <div id="recipes"></div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>
